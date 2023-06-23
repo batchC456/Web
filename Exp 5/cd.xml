@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<cdcatalog>
+
+    <heading>CD Catalogs:</heading>
+
+    <song> 
+        <name> Despacito </name>
+        <singer> Luis Fonsi, Daddy Yankee </singer>
+        <genre> Latin Pop </genre>
+        <year> 2017 </year>
+        <country> Puerto Rico </country>
+    </song>
+
+    <song> 
+        <name> Shape of You </name>
+        <singer> Ed Sheeran </singer>
+        <genre> Pop </genre>
+        <year> 2017 </year>
+        <country> USA </country>
+    </song>
+
+    <song> 
+        <name> Tum Hi Ho </name>
+        <singer> Arijit Singh </singer>
+        <genre> Bollywood </genre>
+        <year> 2013 </year>
+        <country> India </country>
+    </song>
+
+    <song> 
+        <name> Dynamite </name>
+        <singer> BTS </singer>
+        <genre> K-Pop </genre>
+        <year> 2020 </year>
+        <country> South Korea </country>
+    </song>
+
+</cdcatalog>

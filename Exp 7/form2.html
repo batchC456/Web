@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #38404E;
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-div {
+            background-color: white;
+            padding: 30px 25px;
+            min-width: 100px;
+            max-width: 270px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .heading {
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .input-field {
+            padding: 8px;
+            width: 100%;
+            margin-top: 3px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        .button {
+            padding: 10px;
+            width: 100%;
+            background-color: #38404E;
+            color: white;
+        }
+
+        .button:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="form-div">
+        <h2 class="heading">Register</h2>
+
+        <form onsubmit="handleSubmit(event)">
+            <label for="email">Email</label> <br>
+            <input class="input-field" type="email" name="email" id="email" placeholder="Enter your email">
+            <br><br>
+
+            <label for="phone">Phone No.</label> <br>
+            <input class="input-field" type="number" name="phone" id="phone" placeholder="Enter your phone no.">
+            <br><br>
+
+            <label for="pass">Password</label> <br>
+            <input class="input-field" type="password" name="pass" id="pass" placeholder="Enter your password">
+            <br><br>
+
+            <input class="button" type="submit" value="Submit">
+
+        </form>
+    </div>
+
+    <script>
+        function validateEmail(email) {
+            if (email.trim() === "") return "📧 Please Enter Email!";
+            var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (pattern.test(email)) return "";
+            else return "📧 Please Enter Valid Email!";
+        }
+
+        function validatePhoneNumber(phoneNumber) {
+            if (phoneNumber.trim() === "") return "📱 Please Enter Phone Number!";
+            var pattern = /^\d{10}$/;
+            if (pattern.test(phoneNumber)) return "";
+            else return "📱 Please Enter valid Phone Number (10 Digits)";
+        }
+
+        function validatePassword(pass) {
+            let allErrors = "";
+            if (pass.trim() === "") return "🔴 Please Enter Password \n";
+            if (pass.length <= 8) allErrors += "Password must be of 8 length \n";
+            if (!(/[A-Z]/.test(pass))) allErrors += "Atleast one UpperCase Letter \n";
+            if (!(/[a-z]/.test(pass))) allErrors += "Atleast one LowerCase Letter \n";
+            if (!(/\d/.test(pass))) allErrors += "Atleast one Number \n";
+
+            return allErrors;
+        }
+
+        function handleSubmit(event) {
+            //Prevent Page from reloading
+            event.preventDefault();
+
+            //Form Validation
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const pass = document.getElementById('pass').value;
+
+            const emailError = validateEmail(email);
+            const phoneError = validatePhoneNumber(phone);
+            const passwordError = validatePassword(pass);
+
+            if (emailError) alert(emailError);
+            else if (phoneError) alert(phoneError);
+            else if (passwordError) alert(passwordError);
+            else alert("🥳Form Submitted Successfully!");
+        }
+    </script>
+</body>
+</html>

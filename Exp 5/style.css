@@ -1,0 +1,36 @@
+song, name, singer, genre, year, country, heading{
+    display: block;
+}
+
+heading{
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    margin: 8px;
+}
+
+song{
+    margin-top: 20px;
+    margin-left: 12px;
+}
+
+name{
+    margin-bottom: 5px;
+    font-weight: 900;
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(46, 43, 226);
+    text-decoration: underline;
+}
+
+year{
+    color: rgb(43, 197, 46);
+    font-size: 14px;
+}
+
+country{
+    font-size: 15px;
+    font-weight: bold;
+}

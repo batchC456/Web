@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .mainContainer{
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+
+        .resultScreen{
+            min-width: 200px;
+            padding: 10px;
+            margin: 10px 0px 2px -2px;
+            border: 2px solid black;
+        }
+
+        input[type=button]{
+            padding: 10px;
+            text-align: center;
+            margin: -2px;
+        }
+
+        .span1{
+            min-width: 50px;
+            max-width: 50px;
+        }
+
+        .span2{
+            min-width: 100px;
+            max-width: 100px;
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+        <h2> <u>Calculator</u> </h2>
+
+        <div id="calculator">
+
+            <input class="resultScreen" type="text" name="result" id="result">
+
+            <br>
+                <input class="span2 ac" type="button" value="AC" onclick="clearResult()">
+                <input class="span1" type="button" value="DEL" onclick="deleteResult()">
+                <input class="span1" type="button" value="/" onclick="addToResult('/')">
+            <br>
+                <input class="span1" type="button" value="1" onclick="addToResult('1')">
+                <input class="span1" type="button" value="2" onclick="addToResult('2')">
+                <input class="span1" type="button" value="3" onclick="addToResult('3')">
+                <input class="span1" type="button" value="*" onclick="addToResult('*')">
+            <br>
+                <input class="span1" type="button" value="4" onclick="addToResult('4')">
+                <input class="span1" type="button" value="5" onclick="addToResult('5')">
+                <input class="span1" type="button" value="6" onclick="addToResult('6')">
+                <input class="span1" type="button" value="+" onclick="addToResult('+')">
+            <br>
+                <input class="span1" type="button" value="7" onclick="addToResult('7')">
+                <input class="span1" type="button" value="8" onclick="addToResult('8')">
+                <input class="span1" type="button" value="9" onclick="addToResult('9')">
+                <input class="span1" type="button" value="-" onclick="addToResult('-')">
+            <br>
+                <input class="span1" type="button" value="." onclick="addToResult('.')">
+                <input class="span1" type="button" value="0" onclick="addToResult('0')">
+                <input class="span2" type="button" value="=" onclick="calculateResult()">
+            <br>
+
+        </div>
+    </div>
+
+    <script>
+        function addToResult(value) {
+          document.getElementById('result').value += value;
+        }
+        
+        function clearResult() {
+          document.getElementById('result').value = '';
+        }
+
+        function deleteResult(){
+            var result = document.getElementById('result').value;
+            document.getElementById('result').value = result.substring(0, result.length - 1);
+        }
+        
+        function calculateResult() {
+          var result = eval(document.getElementById('result').value);
+          document.getElementById('result').value = result;
+        }
+    </script>
+    
+</body>
+</html>

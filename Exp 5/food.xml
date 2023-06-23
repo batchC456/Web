@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<foodcatalog>
+    <food>
+        <name>Masala Dosa</name>
+        <price>120 Rs.</price>
+        <state>Karnataka</state>
+        <calories>300</calories>
+        <details>Crispy rice and lentil crepe stuffed with spiced potato filling, served with sambar and coconut chutney</details>
+    </food>
+
+    <food>
+        <name>Chole Bhature</name>
+        <price>80 Rs.</price>
+        <state>Punjab</state>
+        <calories>540</calories>
+        <details>Spicy chickpea curry served with deep-fried bread made from maida flour</details>
+    </food>
+
+    <food>
+        <name>Pani Puri</name>
+        <price> 20 Rs.</price>
+        <state> Gujarat </state>
+        <calories> 100 </calories>
+        <details> Crispy, hollow puri shells filled with tangy tamarind water, potato, and chickpeas</details>
+    </food>
+
+    <food>
+        <name>Aloo Gobi</name>
+        <price>100 Rs.</price>
+        <state>Uttar Pradesh</state>
+        <calories>220</calories>
+        <details>Spiced cauliflower and potato curry cooked with turmeric, cumin, and coriander</details>
+    </food>
+
+</foodcatalog>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date & Time</title>
+</head>
+<body>
+    <h1 id="heading"></h1>
+</body>
+
+<script lang="javascript">
+
+    //Function to get current date and time
+    function getDate() {
+        const date = new Date();
+        const heading = document.getElementById("heading");
+        heading.innerText = date;
+    }
+
+    //Function which call itself after every 1 second
+    setInterval(getDate, 1000);
+
+</script>
+</html>
